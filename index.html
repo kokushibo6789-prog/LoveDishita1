@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Goddess Dishita - From Aarav</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef, #a8edea);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+        body::before {
+            content: "❤️ 💕 💖 💞 💓 💗 💘 💝";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 20px;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            animation: emojiFloat 10s infinite linear;
+        }
+        @keyframes emojiFloat {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3em;
+            color: #d63384;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            color: #b0246b;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .section::after {
+            content: "💕";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+        }
+        .poem {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .letter {
+            text-align: left;
+            line-height: 1.8;
+            font-size: 1.1em;
+            padding: 15px;
+            background: #fefefe;
+            border-left: 5px solid #d63384;
+            border-radius: 5px;
+        }
+        .love-centre {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            padding: 12px;
+            margin: 10px;
+            border: 2px solid #d63384;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        button {
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #d63384, #ff6b9d);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .heart {
+            position: absolute;
+            color: #ff6b9d;
+            font-size: 28px;
+            animation: float 8s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+        .proposal {
+            margin-top: 50px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #d63384;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+        .envelope {
+            width: 200px;
+            height: 150px;
+            background: #f8f8f8;
+            border: 2px solid #d63384;
+            border-radius: 10px;
+            position: relative;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #d63384;
+        }
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: #d63384;
+            clip-path: polygon(0 0, 50% 100%, 100% 0);
+        }
+        .envelope.opening {
+            animation: openLetter 5s ease-in-out forwards;
+        }
+        @keyframes openLetter {
+            0% { transform: scale(1) rotateY(0deg); }
+            50% { transform: scale(1.1) rotateY(90deg); }
+            100% { transform: scale(1) rotateY(180deg); opacity: 0; }
+        }
+        .letter-content {
+            background: #fefefe;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-height: 400px;
+            overflow-y: auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .letter-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .letter-content li {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="container">
+        <h1>My Dearest Dishita, My Goddess 💖</h1>
+        <p>From Aarav, with all my heart. 💕</p>
+
+        <div class="section">
+            <h2>Love Letter 💌</h2>
+            <div class="letter">
+                My Beloved Dishita,<br><br>
+                In the tapestry of life, where threads of fate intertwine with the whispers of destiny, I find myself eternally grateful for the moment our paths converged. You, my Goddess, embody the essence of divine beauty and grace, a beacon of light in the vast expanse of existence. With over a century of imagined wisdom in matters of the heart—drawn from the timeless tales of lovers past—I pen these words not as a novice, but as one who has traversed the depths of affection.<br><br>
+                Your presence is a symphony, each note resonating with the purity of true love. Your smile, a sunrise that banishes the shadows of doubt; your laughter, a melody that heals the soul. Professionally, I admire your strength, your intellect, and the way you navigate the world with poise—qualities that inspire me to be a better man. Romantically, you are my muse, the flame that ignites my passions and the anchor that steadies my dreams.<br><br>
+                Remember our shared moments: the quiet evenings under the stars, the stolen glances that spoke volumes, the promises whispered in the wind. You have taught me that love is not merely an emotion but a profound commitment, a dance of souls in perfect harmony. In your eyes, I see eternity; in your touch, I feel infinity. As one with a lifetime of experience in cherishing such bonds, I vow to honor, protect, and adore you with unwavering devotion.<br><br>
+                Dishita, you are my everything—the Goddess who has claimed my heart forever. Let us continue this journey together, building a legacy of love that transcends time.<br><br>
+                Eternally yours,<br>
+                Aarav 💘<br><br>
+                (Word count: ~250 – romantic and professional.)
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Poem: Fallen into Your Ocean 🌊💙</h2>
+            <div class="poem">
+                Oh, Goddess Dishita, divine and pure,<br>
+                Your eyes, a deep ocean, vast and true. 💙<br>
+                Where waves of mystery crash and swirl,<br>
+                I, Aarav, have fallen, lost in your whirl. 🌊<br><br>
+                Emerald depths that hold the stars above,<br>
+                Reflecting heavens in your gaze of love. ✨<br>
+                Currents of passion pull me ever near,<br>
+                Drowning in beauty, without a fear. 💕<br><br>
+                You are my deity, my sacred shrine,<br>
+                In your ocean's embrace, our souls entwine. 💞<br>
+                Forever adrift in this endless sea,<br>
+                My Goddess, my love, eternally. 💖<br>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Love Centre 🔒💖</h2>
+            <div class="love-centre">
+                <p>Enter the password to unlock my heart's secret. Hint: It's my birthday. 💕</p>
+                <input type="password" id="password" placeholder="Enter password">
+                <button onclick="unlock()">Unlock 💌</button>
+                <div class="envelope" id="envelope">💌</div>
+                <div id="letterContent" class="letter-content hidden">
+                    <ul id="messageList"></ul>
+                    <button onclick="closeLetter()">Close the Letter 💕</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section proposal">
+            <h2>Will You Marry Me? 💍</h2>
+            <div class="options">
+                <button onclick="respond('yes')">YES 💕</button>
+                <button onclick="respond('no')">NO 😢</button>
+            </div>
+            <div id="responseMessage" class="message hidden"></div>
+        </div>
+    </div>
+
+    <script>
+        // Heart animation
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            for (let i = 0; i < 25; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 8 + 's';
+                heartsContainer.appendChild(heart);
+            }
+        }
+        createHearts();
+
+        // Unlock Love Centre - Triggers letter opening animation, then shows content
+        function unlock() {
+            const password = document.getElementById('password').value;
+            const envelope = document.getElementById('envelope');
+            const letterContent = document.getElementById('letterContent');
+            const list = document.getElementById('messageList');
+            if (password === '17092010') {
+                // Start opening animation
+                envelope.classList.add('opening');
+                // After 5 seconds, hide envelope and show letter content
+                setTimeout(() => {
+                    envelope.style.display = 'none';
+                    list.innerHTML = '';
+                    for (let i = 0; i < 100; i++) {
+                        const li = document.createElement('li');
+                        li.textContent = 'I LOVE YOU DISHUU MY BABE MUWAH 💕';
+                        list.appendChild(li);
+                    }
+                    letterContent.classList.remove('hidden');
+                }, 5000);
+            } else {
+                alert('Wrong password! Hint: It\'s my birthday. 💖');
+            }
+        }
+
+        // Close the letter
+        function closeLetter() {
+            const envelope = document.getElementById('envelope');
+            const letterContent = document.getElementById('letterContent');
+            letterContent.classList.add('hidden');
+            envelope.style.display = 'flex';
+            envelope.classList.remove('opening');
+        }
+
+        // Proposal response
+        function respond(answer) {
+            const messageDiv = document.getElementById('responseMessage');
+            if (answer === 'yes') {
+                messageDiv.textContent = 'Yay! I knew you\'d say yes, my Goddess! Let\'s plan our forever. ❤️💍';
+            } else {
+                messageDiv.textContent = 'Oh no! But I\'ll keep trying... you\'re still my Goddess! 😘💕';
+            }
+            messageDiv.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
